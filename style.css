@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -58,9 +59,10 @@ p {
 }
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-block: 1.5rem;
+  padding-block: 1rem;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -68,6 +70,7 @@ nav {
 }
 nav .logo {
   display: flex;
+  margin-left: 2.2rem;
 }
 nav .logo img {
   width: 6rem;
@@ -87,11 +90,24 @@ nav ul li a {
 }
 nav ul li:nth-child(1) {
   margin-inline: 0;
-  margin-right: 1rem;
+  margin-right: 2.2rem;
 }
 nav ul li:nth-child(5) {
   margin-inline: 0;
-  margin-left: 1rem;
+  margin-left: 2.2rem;
+}
+
+.navbar-scrolled {
+  background: #fff !important;
+  color: var(--primary);
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
+}
+.navbar-scrolled a {
+  color: var(--primary);
+}
+.navbar-scrolled button {
+  background-color: var(--primary);
+  color: #fff;
 }
 
 header {
@@ -175,6 +191,39 @@ header .header-content button {
   flex-direction: row-reverse;
 }
 
+#prints {
+  padding-block: 2rem;
+  font-size: 16px;
+}
+#prints h4 {
+  width: 80%;
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+  padding-block: 2rem;
+  font-size: 20px;
+}
+#prints .prints {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#prints .prints a {
+  height: 30vh;
+  width: 33.33%;
+  margin-bottom: 2rem;
+}
+#prints .prints .paper {
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/newspapers/First-day-at-school.jpg");
+  background-size: cover;
+  background-position: 0% 30%;
+}
+#team {
+  padding-block: 2rem;
+  padding-bottom: 6rem;
+}
 #team h4 {
   width: 80%;
   -webkit-margin-start: 2rem;
@@ -184,10 +233,14 @@ header .header-content button {
   font-size: 20px;
 }
 #team .members {
+  --gap: 2rem;
   width: 100%;
   display: flex;
+  gap: var(--gap);
   overflow-x: scroll;
-  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  scroll-padding: var(--gap);
+  padding-bottom: 3rem;
 }
 #team .members .member img {
   width: 20rem;
@@ -208,5 +261,73 @@ header .header-content button {
   padding-block: 0.15rem;
 }
 #team .members .member:nth-child(1) {
-  margin-left: 2rem;
+  margin-left: var(--gap);
+}
+#team .members > * {
+  scroll-snap-align: start;
+}
+#team ::-webkit-scrollbar {
+  display: none;
+}
+
+#publications {
+  padding-block: 2rem;
+  font-size: 16px;
+  background-color: var(--family-tree);
+  background-image: url("/assets/banner.jpg");
+  color: #fff;
+}
+#publications h4 {
+  width: 80%;
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+  padding-block: 2rem;
+  font-size: 20px;
+}
+#publications .articles {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  margin-inline: auto;
+  margin-block: 4rem;
+  justify-content: space-between;
+}
+#publications .articles .article {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 22%;
+}
+#publications .articles .article img {
+  width: 100%;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+#publications .articles .article a {
+  color: #000;
+  opacity: 0.5;
+  text-decoration: none;
+  margin-inline: 2rem;
+}
+#publications a {
+  color: #fff;
+}
+#publications h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  width: 85%;
+  margin-inline: auto;
+  text-decoration: underline;
+}
+#publications h4 {
+  text-align: center;
+  width: 85%;
+  margin-inline: auto;
+}
+#publications button {
+  display: block;
+  margin-inline: auto;
+  padding-inline: 2rem;
 }/*# sourceMappingURL=style.css.map */

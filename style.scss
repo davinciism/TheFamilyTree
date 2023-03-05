@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -70,15 +71,17 @@ p{
 }
 
 nav{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-block: 1.5rem;
+    padding-block: 1rem;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
     .logo{
         display: flex;
+        margin-left: 2.2rem;
         img{
             width: 6rem;
         }
@@ -98,13 +101,26 @@ nav{
         }
         li:nth-child(1){
             margin-inline: 0;
-            margin-right: 1rem;
+            margin-right: 2.2rem;
         }
         li:nth-child(5){
             margin-inline: 0;
-            margin-left: 1rem;
+            margin-left: 2.2rem;
         }
     }
+}
+
+.navbar-scrolled{
+    background: #fff !important;
+    color: var(--primary);
+    a{
+        color: var(--primary);
+    }
+    button{
+        background-color: var(--primary);
+        color: #fff;
+    }
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
 }
 
 
@@ -191,8 +207,46 @@ header{
     flex-direction: row-reverse;
 }
 
-#team{
+
+#prints{
+    padding-block: 2rem;
+    font-size: 16px;
+    h4{
+        width: 80%;
+        margin-inline-start: 2rem;
+        padding-block: 2rem;
+        font-size: 20px;
+    }
+    .prints{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        a{
+            height: 30vh;
+            width: 33.33%;
+            margin-bottom: 2rem;
+        }
+        .paper{
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/newspapers/First-day-at-school.jpg');
+            background-size: cover;
+            background-position: 0% 30%;
+            //padding-bottom: 2rem;
+        }
+        &:nth-child(1){
+            //background-image: url('assets/newspapers/First-day-at-school.jpg');
+            //background-position: 0% 40%;
+        }
+    }
     
+
+}
+
+#team{
+    padding-block: 2rem;
+    padding-bottom: 6rem;
     h4{
         width: 80%;
         margin-inline-start: 2rem;
@@ -201,10 +255,16 @@ header{
         font-size: 20px;
     }
     .members{
+
+        --gap: 2rem;
+
         width: 100%;
         display: flex;
+        gap: var(--gap);
         overflow-x: scroll;
-        gap: 2rem;
+        scroll-snap-type: x mandatory;
+        scroll-padding: var(--gap);
+        padding-bottom: 3rem;
         .member{
             //width: 10rem;
             //background-color: bisque;
@@ -229,7 +289,88 @@ header{
             }
         }
         .member:nth-child(1){
-            margin-left: 2rem;
+            margin-left: var(--gap);
         }
     }
+    
+    .members > * {
+        scroll-snap-align: start;
+    }
+
+
+    ::-webkit-scrollbar{
+        //background-color: grey;
+        display: none;
+    }
+
 }
+
+
+
+
+
+
+#publications{
+    padding-block: 2rem;
+    font-size: 16px;
+    background-color: var(--family-tree);
+    background-image: url('/assets/banner.jpg');
+    color: #fff;
+    h4{
+        width: 80%;
+        margin-inline-start: 2rem;
+        padding-block: 2rem;
+        font-size: 20px;
+    }
+
+    .articles{
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        margin-inline: auto;
+        margin-block: 4rem;
+        justify-content: space-between;
+        .article{
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 20px;
+            width: 22%;
+            img{
+                width: 100%;
+                height: 10rem;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            a{
+                color: #000;
+                opacity: 0.5;
+                text-decoration: none;
+                margin-inline: 2rem;
+            }
+        }
+        
+    }
+    a{
+        color: #fff;
+    }
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        width: 85%;
+        margin-inline: auto;
+        text-decoration: underline;
+    }
+    h4{
+        text-align: center;
+        width: 85%;
+        margin-inline: auto;
+    }
+
+    button{
+        display: block;
+        margin-inline: auto;
+        padding-inline: 2rem;
+    }
+    
+}
+
