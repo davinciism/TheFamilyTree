@@ -555,6 +555,10 @@ header .header-content button {
   opacity: 1;
   padding-left: 1rem;
 }
+#appointments .form-area form fieldset {
+  outline: 0;
+  border: 0;
+}
 #appointments .form-area form .checkbox-container {
   height: 52px;
   border-radius: 8px;

@@ -588,7 +588,10 @@ header{
                 padding-left: 1rem;
             }
             
-            
+            fieldset{
+                outline: 0;
+                border: 0;
+            }
 
             //CHECKBOX
             .checkbox-container{
