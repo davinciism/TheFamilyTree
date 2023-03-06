@@ -52,7 +52,8 @@ $tablet: 1000px;
     min-width: 72px;
     height: 36px;
     padding-inline: 1.5rem;
-    padding-block: 0.4rem;
+    //padding-block: 0.4rem;
+    padding-block: .15rem;
     box-sizing: content-box;
     background-color: transparent;
     color: #fff;
@@ -244,68 +245,47 @@ header{
 
 }
 
-#team{
-    padding-block: 2rem;
-    padding-bottom: 6rem;
-    h4{
-        width: 80%;
-        margin-inline-start: 2rem;
-        padding-block: 2rem;
-        opacity: .5;
-        font-size: 20px;
-    }
-    .members{
-
-        --gap: 2rem;
-
-        width: 100%;
+#book{
+    display: flex;
+    padding-block: 4rem;
+    .book{
+        margin-block: 2rem;
+        width: 40%;
         display: flex;
-        gap: var(--gap);
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-padding: var(--gap);
-        padding-bottom: 3rem;
-        .member{
-            //width: 10rem;
-            //background-color: bisque;
-            img{
-                width: 20rem;
-            }
-            h2{
-                color: var(--primary);
-                padding-block-start: 1rem;
-                //padding-block-end: 1.5rem;
-                font-size: 1.25rem;
-            }
-            p{
-                width: 90%;
-                padding-block: 1.5rem;
-            }
-            button{
-                color: var(--primary);
-                border: 2px solid var(--primary);
-                padding-block: .15rem;
-                //font-weight: 700;
-            }
-        }
-        .member:nth-child(1){
-            margin-left: var(--gap);
+        justify-content: center;
+        align-items: center;
+        img{
+            margin-block: 2rem;
+            //margin-inline: auto; not working
+            
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         }
     }
-    
-    .members > * {
-        scroll-snap-align: start;
+    .content{
+        width: 60%;
+        h1{
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 2rem;
+            display: block;
+        }
+        p{
+            margin: 2rem;
+        }
+        button{
+            color: var(--primary);
+            border-color: var(--primary);
+            margin-inline-start: 2rem;
+            &:hover{
+                background-color: var(--primary);
+                color: #fff;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+            }
+        }
+        
     }
-
-
-    ::-webkit-scrollbar{
-        //background-color: grey;
-        display: none;
-    }
-
 }
-
-
 
 
 
@@ -374,3 +354,354 @@ header{
     
 }
 
+
+#team{
+    padding-block: 2rem;
+    padding-bottom: 6rem;
+    h4{
+        width: 80%;
+        margin-inline-start: 2rem;
+        padding-block: 2rem;
+        opacity: .5;
+        font-size: 20px;
+    }
+    .members{
+
+        --gap: 2rem;
+
+        width: 100%;
+        display: flex;
+        gap: var(--gap);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: var(--gap);
+        padding-bottom: 3rem;
+        .member{
+            //width: 10rem;
+            //background-color: bisque;
+            //width: 25%;
+            img{
+                width: 22rem;
+            }
+            h2{
+                color: var(--primary);
+                padding-block-start: 1rem;
+                //padding-block-end: 1.5rem;
+                font-size: 1.25rem;
+            }
+            p{
+                width: 90% !important;
+                max-width: 20rem; //so that it doesn't cross the img boundary
+                padding-block: 1.5rem;
+            }
+            button{
+                color: var(--primary);
+                border: 2px solid var(--primary);
+                padding-block: .15rem;
+                //font-weight: 700;
+            }
+            .shweta-full-text{
+                //max-width: 90% !important;
+            }
+        }
+        .member:nth-child(1){
+            margin-left: var(--gap);
+        }
+    }
+    
+    .members > * {
+        scroll-snap-align: start;
+    }
+
+
+    ::-webkit-scrollbar{
+        //background-color: grey;
+        display: none;
+    }
+
+}
+
+#seminars{
+    padding-block: 2rem;
+    font-size: 16px;
+    background-color: var(--family-tree);
+    background-image: url('/assets/connected.jpg');
+    color: #fff;
+    h4{
+        width: 80%;
+        margin-inline-start: 2rem;
+        padding-block: 2rem;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .articles{
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        margin-inline: auto;
+        margin-block: 4rem;
+        justify-content: space-between;
+        .article{
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 20px;
+            width: 22%;
+            img{
+                width: 100%;
+                height: 10rem;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            a{
+                color: #000;
+                opacity: 0.5;
+                text-decoration: none;
+                margin-inline: 2rem;
+                &:hover{
+                    cursor: initial;
+                }
+            }
+        }
+        
+    }
+    a{
+        color: #fff;
+    }
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        width: 85%;
+        margin-inline: auto;
+        //text-decoration: underline;
+    }
+    .white{
+        color: #fff !important;
+    }
+
+    button{
+        display: block;
+        margin-inline: auto;
+        padding-inline: 2rem;
+    }
+    
+}
+
+
+#workspace{
+    padding-block: 10rem;
+    h4{
+        width: 80%;
+        margin-inline-start: 2rem;
+        padding-block: 2rem;
+        opacity: .5;
+        font-size: 20px;
+    }
+    .gallery{
+        display: grid;
+        grid-template-areas: "one two"
+                            "one three";
+        height: 100vh;
+    }
+    .img{
+        background-color: azure;
+        background-image: url('/assets/workspace/one.png');
+        background-size: cover;
+        background-position: 0%;
+        background-repeat: no-repeat;
+    }
+    .one{
+        grid-area: one;
+    }
+    .two{
+        grid-area: two;
+        background-image: url('/assets/workspace/two.png');
+    }
+    .three{
+        grid-area: three;
+        background-image: url('/assets/workspace/three.png');
+    }
+}
+
+#appointments{
+    padding-block: 2rem;
+    h1{
+        margin-left: 2.2rem;
+        margin-bottom: 2.2rem;
+        font-size: 3.2rem;
+        color: var(--primary);
+    }
+    .text-info{
+        display: flex;
+        flex-direction: row;
+        p{
+            margin-left: 2.2rem;
+            font-size: 16px;
+            line-height: 173.4%;
+            color: #156064;
+            opacity: 1;
+            padding-block: 1.5rem;
+            padding-inline-end: 4rem;
+            margin-bottom: 2rem;
+            width: 35%;
+            color: var(--primary) !important;
+        }
+    }
+    .form-row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-area{
+        padding-inline: 2.2rem;
+        padding-block: 2.2rem;
+        background-color: var(--family-tree);
+        width: 50%;
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin-inline: auto;
+            padding-block: 1rem;
+            padding-block-end: 2rem;
+            h3{
+                font-size: 1.6rem;
+                color: #fff;
+                margin-bottom: 2.5rem;
+            }
+            input {
+                height: 52px;
+                border-radius: 8px;
+                margin-bottom: 1.8rem;
+                padding: 1rem;
+                outline: 0;
+                border: 0;
+                background-color: #fff;
+            }
+            ::placeholder{
+                font-size: 1rem;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: 600;
+                opacity: 1;
+                padding-left: 1rem;
+            }
+            
+            
+
+            //CHECKBOX
+            .checkbox-container{
+                height: 52px;
+                border-radius: 8px;
+                margin-bottom: 1.8rem;
+                padding: 1rem;
+                outline: 0;
+                border: 0;
+                background-color: #fff;
+                width: 48%;
+
+                .checkbox{
+                    display: block;
+                    position: relative;
+                    padding-left: 2rem;
+                    cursor: pointer;
+                    font-size: 1.4rem;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+    
+                    font-size: 1rem;
+                    color: rgba(0, 0, 0, 0.5);
+                    font-weight: 600;
+                    opacity: 1;
+                    padding-left: 2rem;
+    
+    
+                    //Hide the browser's default checkbox 
+                    input{
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+                    //create a custom checkbox
+                    .checkmark{
+                        position: absolute;
+                        top: -3px;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        background-color: #D9D9D9;
+    
+                        &::after{
+                            content: url('/assets/check-mark.svg');
+                            position: absolute;
+                            width: 8px !important;
+                            height: 8px !important;
+                            display: none;
+                        }
+                    }
+                    &:hover > .checkmark{
+                        background-color: #ccc;
+                    }
+                    
+                }
+                /*
+                .checkbox input:checked ~ .checkmark {
+                    background-color: #2196F3;
+                }*/
+    
+                /* Show the checkmark when checked */
+                .checkbox input:checked ~ .checkmark:after {
+                    display: block;
+                }
+            }
+
+            .one-row{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        
+            
+
+            textarea{
+                //height: 52px;
+                border-radius: 8px;
+                margin-bottom: 1.8rem;
+                padding: 1rem;
+                outline: 0;
+                border: 0;
+                background-color: #fff;
+                resize: none;
+            }
+            
+            /*
+            p{
+                font-size: 16px;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: 600;
+                opacity: 1;
+            }*/
+            button{
+                background-color: var(--primary);
+                color: #fff;
+                width: 25%;
+                padding-block: 0.5rem;
+                font-weight: bold;
+                border: #fff 1px solid;
+            }
+        }
+    }
+    .img-area{
+        height: auto;
+        width: 50%;
+        background-image: url('/assets/image-4-452x570.jpg');
+        background-size: cover;
+        background-position: 0% 0%;
+    }
+}   
