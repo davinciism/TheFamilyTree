@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root{
@@ -13,7 +14,7 @@
     --family-tree: #81864e;
 }
 
-$mobile: 500px;
+$mobile: 600px;
 $tablet: 1000px;
 
 @mixin mobile{
@@ -31,18 +32,26 @@ $tablet: 1000px;
 .container{
     width: 80%;
     margin-inline: auto;
+    @include mobile{
+        width: 90%;
+    }
 }
 .btn-primary{
     min-width: 72px;
     height: 36px;
     padding-inline: 1rem;
-    padding-block: 0.4  rem;
     box-sizing: content-box;
     background-color: #fff;
     color: var(--primary);
     font-weight: 700;
     border: 3px solid var(--primary);
     border-radius: 52px;
+
+    @include mobile{
+        font-size: 16px;
+        padding-inline: 20px;
+        padding-block: 4px;
+    }
 }
 .btn-primary:hover{
     cursor: pointer;
@@ -60,6 +69,11 @@ $tablet: 1000px;
     font-weight: 500;
     border: 2px solid #fff;
     border-radius: 52px;
+    @include mobile{
+        font-size: 16px;
+        padding-inline: 20px;
+        padding-block: 4px;
+    }
 }
 .btn-outline:hover{
     cursor: pointer;
@@ -69,6 +83,9 @@ p{
     font-size: 1rem;
     line-height: 173%;
     opacity: 0.6;
+    @include mobile{
+        font-size: 16px;
+    }
 }
 
 nav{
@@ -80,6 +97,10 @@ nav{
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
+
+    @include mobile{
+        display: none;
+    }
     .logo{
         display: flex;
         margin-left: 2.2rem;
@@ -111,6 +132,8 @@ nav{
     }
 }
 
+
+
 .navbar-scrolled{
     background: #fff !important;
     color: var(--primary);
@@ -124,6 +147,135 @@ nav{
     box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
 }
 
+.navbar{
+    display: none;
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    @include mobile{
+        display: block;
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            height: 48px;
+        }
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-icon{
+            height: 28px;
+            width: 42px;
+            display: flex;
+            margin-left: 20px;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            .line{
+                background-color: #fff;
+                width: 100%;
+                height: 4px;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+.navbar-mobile-scrolled{
+    background: #fff !important;
+    color: var(--primary);
+    a{
+        color: var(--primary);
+    }
+    img{
+
+    }
+    button{
+        background-color: var(--primary);
+        color: #fff;
+    }
+    .line{
+        background-color: var(--primary) !important;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+    }
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
+}
+#sidebar{
+    display: none;
+
+    @include mobile{
+        display: block;
+    }
+
+    width: 0%;
+    opacity: 0;
+    height: 100vh;
+    background-color: var(--primary);
+    position: fixed;
+    left: 0;
+    z-index: 200;
+    
+    .close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.7;
+      }
+      .close:hover {
+        opacity: 1;
+      }
+      .close:before, .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: #FFF;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+      
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-block: 48px;
+        padding-top: 120px;
+        li{
+            margin-inline: 2.2rem;
+            margin-block: 20px;
+            padding-block: 12px;
+            a{
+                text-decoration: none !important;
+                color: #fff;
+                text-align: initial;
+                font-size: 20px;
+            }
+        }
+    }
+    button{
+        display: block;
+        margin-inline: auto !important;
+    }
+    a{
+        text-decoration: none !important;
+    }
+
+    transition: 0.3s;
+}
 
 header{
     background-color: var(--family-tree);
@@ -145,14 +297,24 @@ header{
         margin-inline: auto;
         gap: 1rem;
         padding-top: 6rem;
+        @include mobile{
+            width: 90%;
+            padding-top: 2rem;
+        }
         h1{
             font-size: 3.4rem;
+            @include mobile{
+                font-size: 2.5rem;
+            }
         }
         p{
             font-size: 16px;
             padding-block: 1rem;
             width: 40%;
             line-height: 1.8rem;
+            @include mobile{
+                width: 90%;
+            }
         }
         button{
             margin-block: 1rem;
@@ -168,12 +330,24 @@ header{
     padding-block: 2rem;
     align-items: center;
     gap: 2rem;
+
+    @include mobile{
+        width: 90%;
+        flex-direction: column;
+        margin-block: 24px;
+    }
     img{
         width: 50%;
+        @include mobile{
+            width: 90%;
+        }
     }
     p{
-        //width: 50%;
+        width: 50%;
         font-size: 1.2rem;
+        @include mobile{
+            width: 90%;
+        }
     }
 }
 
@@ -181,14 +355,22 @@ header{
     background-color: var(--family-tree);
     background-image: url('/assets/connected.jpg');
     background-size: cover;
-    padding: 5rem;
+    padding: 3rem;
     text-align: center;
     color: #fff;
     border-radius: 2rem;
+    @include mobile{
+        padding: 16px;
+        padding-block: 52px;
+    }
     h1{
         font-size: 3.4rem;
         width: 70%;
         margin-inline: auto;
+        @include mobile{
+            width: 80%;
+            font-size: 42px;
+        }
     }
     .line{
         width: 50%;
@@ -196,37 +378,69 @@ header{
         background-color: #fff;
         margin-inline: auto;
         margin-block: 3rem;
+        @include mobile{
+            margin-block: 36px
+        }
     }
     p{
         opacity: 1;
         width: 70%;
         margin-inline: auto;
+        @include mobile{
+            width: 90%;
+            
+        }
     }
 }
 
 .reverse{
     flex-direction: row-reverse;
+    padding-bottom: 1rem;
+    @include mobile{
+        width: 90%;
+        flex-direction: column;
+        margin-block: 24px;
+        img{
+            display: none;
+        }
+    }
+    
 }
 
 
 #prints{
     padding-block: 2rem;
+    padding-block-start: 4rem;
     font-size: 16px;
     h4{
         width: 80%;
         margin-inline-start: 2rem;
         padding-block: 2rem;
         font-size: 20px;
+        @include mobile{
+            width: 100%;
+            margin-inline-start: 0;
+            text-align: center;
+        }
     }
     .prints{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        @include mobile{
+            width: 90%;
+            margin-inline: auto;
+        }
         a{
             height: 30vh;
             width: 33.33%;
             margin-bottom: 2rem;
+            @include mobile{
+                height: 40vh;
+                width: 50%;
+            }
+            
         }
         .paper{
             width: 100%;
@@ -235,11 +449,42 @@ header{
             background-size: cover;
             background-position: 0% 30%;
             //padding-bottom: 2rem;
+            overflow-y: hidden !important;
+            &:hover{
+                //transform: scale(1.1);
+                
+            }
+            transition: 0.3s;
         }
-        &:nth-child(1){
-            //background-image: url('assets/newspapers/First-day-at-school.jpg');
-            //background-position: 0% 40%;
+        .one{
+            background-image: url('assets/newspapers/First-day-at-school.jpg');
+            background-position: 0% 30%;
         }
+        .two{
+            background-image: url('assets/newspapers/don\'t\ sing.jpg') !important;
+            background-position: 0% 30%;
+        }
+        .three{
+            background-image: url('assets/newspapers/Not\ a\ Child\'s\ Play.jpg');
+            background-position: 0% 30%;
+        }
+        .four{
+            background-image: url('assets/newspapers/only\ love\ is\ real.jpg');
+            background-position: 0% 10%;
+        }
+        .five{
+            background-image: url('assets/newspapers/sacn\ 1.jpg');
+            background-position: 0% 10%;
+        }
+        .six{
+            background-image: url('assets/newspapers/scan\ 2.jpg');
+            background-position: 0% 30%;
+        }
+        .seven{
+            background-image: url('assets/newspapers/The\ Missing\ Man.jpg');
+            background-position: 0% 10%;
+        }
+        
     }
     
 
@@ -248,34 +493,63 @@ header{
 #book{
     display: flex;
     padding-block: 4rem;
+    padding-block-end: 6rem;
+    @include mobile{
+        flex-direction: column-reverse;
+        padding-block: 16px;
+    }
     .book{
         margin-block: 2rem;
+        padding-block: 4rem;
         width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile{
+            width: 100%;
+            margin-inline: auto;
+        }
         img{
             margin-block: 2rem;
             //margin-inline: auto; not working
-            
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         }
     }
     .content{
         width: 60%;
+        @include mobile{
+            width: 90%;
+            margin-inline: auto
+        }
         h1{
             font-size: 3rem;
             color: var(--primary);
             margin: 2rem;
             display: block;
+            @include mobile{
+                margin: 0;
+            }
         }
         p{
             margin: 2rem;
+            @include mobile{
+                margin: 0;
+                margin-block: 16px;
+            }
+        }
+        a{
+            text-decoration: none !important;
         }
         button{
             color: var(--primary);
             border-color: var(--primary);
             margin-inline-start: 2rem;
+            @include mobile{
+                margin: 0;
+                margin-inline: auto;
+                display: block;
+                
+            }
             &:hover{
                 background-color: var(--primary);
                 color: #fff;
@@ -292,6 +566,7 @@ header{
 
 #publications{
     padding-block: 2rem;
+    padding-block-start: 3.25rem;
     font-size: 16px;
     background-color: var(--family-tree);
     background-image: url('/assets/banner.jpg');
@@ -299,7 +574,8 @@ header{
     h4{
         width: 80%;
         margin-inline-start: 2rem;
-        padding-block: 2rem;
+        padding-block-start: 2rem;
+        margin-block-start: 2rem;
         font-size: 20px;
     }
 
@@ -310,11 +586,19 @@ header{
         margin-inline: auto;
         margin-block: 4rem;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
         .article{
             padding: 2rem;
             background-color: #fff;
             border-radius: 20px;
             width: 22%;
+            @include mobile{
+                width: 100%;
+                margin-bottom: 16px;
+            }
             img{
                 width: 100%;
                 height: 10rem;
@@ -339,17 +623,27 @@ header{
         width: 85%;
         margin-inline: auto;
         text-decoration: underline;
+        @include mobile{
+            font-size: 24px;
+        }
     }
     h4{
         text-align: center;
         width: 85%;
         margin-inline: auto;
+        margin-bottom: 2rem;
+        @include mobile{
+             padding: 0;
+        }
     }
 
     button{
         display: block;
         margin-inline: auto;
         padding-inline: 2rem;
+        @include mobile{
+            margin-block-start:30px;
+        }
     }
     
 }
@@ -368,7 +662,7 @@ header{
     .members{
 
         --gap: 2rem;
-
+        --gap-mobile: 24px;
         width: 100%;
         display: flex;
         gap: var(--gap);
@@ -376,12 +670,28 @@ header{
         scroll-snap-type: x mandatory;
         scroll-padding: var(--gap);
         padding-bottom: 3rem;
+        justify-content: center;
+        @include mobile{
+            //flex-wrap: wrap;
+            //gap: var(--gap-mobile);
+            //scroll-padding: var(--gap-mobile);
+            overflow-x: scroll;
+            justify-content: flex-start;
+        }
         .member{
             //width: 10rem;
             //background-color: bisque;
             //width: 25%;
+            @include mobile{
+                width: 50vw;
+                overflow: visible;
+                overflow-x: visible;
+            }
             img{
                 width: 22rem;
+                @include mobile{
+                    width: 50vw;
+                }
             }
             h2{
                 color: var(--primary);
@@ -393,19 +703,22 @@ header{
                 width: 90% !important;
                 max-width: 20rem; //so that it doesn't cross the img boundary
                 padding-block: 1.5rem;
+                @include mobile{
+                    //min-width: 14rem;
+                }
             }
             button{
                 color: var(--primary);
                 border: 2px solid var(--primary);
                 padding-block: .15rem;
-                //font-weight: 700;
             }
-            .shweta-full-text{
-                //max-width: 90% !important;
-            }
+
         }
         .member:nth-child(1){
             margin-left: var(--gap);
+            @include mobile{
+                //margin-left: var(--gap-mobile);
+            }
         }
     }
     
@@ -423,6 +736,7 @@ header{
 
 #seminars{
     padding-block: 2rem;
+    padding-block-start: 4rem;
     font-size: 16px;
     background-color: var(--family-tree);
     background-image: url('/assets/connected.jpg');
@@ -444,11 +758,19 @@ header{
         margin-inline: auto;
         margin-block: 4rem;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
         .article{
             padding: 2rem;
             background-color: #fff;
             border-radius: 20px;
             width: 22%;
+            @include mobile{
+                width: 100%;
+                margin-bottom: 16px;
+            }
             img{
                 width: 100%;
                 height: 10rem;
@@ -492,6 +814,7 @@ header{
 
 #workspace{
     padding-block: 10rem;
+    padding-block-end: 5rem;
     h4{
         width: 80%;
         margin-inline-start: 2rem;
@@ -504,6 +827,11 @@ header{
         grid-template-areas: "one two"
                             "one three";
         height: 100vh;
+        @include mobile{
+            grid-template-areas: "one"
+                                    "two"
+                                    "three";
+        }
     }
     .img{
         background-color: azure;
@@ -511,6 +839,10 @@ header{
         background-size: cover;
         background-position: 0%;
         background-repeat: no-repeat;
+        @include mobile{
+            height: 33.33vh;
+            background-position: 0% 50%;
+        }
     }
     .one{
         grid-area: one;
@@ -518,15 +850,21 @@ header{
     .two{
         grid-area: two;
         background-image: url('/assets/workspace/two.png');
+        @include mobile{
+            background-position: 0% 70%;
+        }
     }
     .three{
         grid-area: three;
         background-image: url('/assets/workspace/three.png');
+        @include mobile{
+            background-position: 0% 70%;
+        }
     }
 }
 
 #appointments{
-    padding-block: 2rem;
+    padding-block-start: 4.5rem;
     h1{
         margin-left: 2.2rem;
         margin-bottom: 2.2rem;
@@ -547,17 +885,27 @@ header{
             margin-bottom: 2rem;
             width: 35%;
             color: var(--primary) !important;
+            @include mobile{
+                width: 50%;
+                padding-inline-end: 12px;
+            }
         }
     }
     .form-row{
         display: flex;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+        }
     }
     .form-area{
         padding-inline: 2.2rem;
         padding-block: 2.2rem;
         background-color: var(--family-tree);
         width: 50%;
+        @include mobile{
+            width: 100%;
+        }
         form{
             display: flex;
             flex-direction: column;
@@ -565,6 +913,9 @@ header{
             margin-inline: auto;
             padding-block: 1rem;
             padding-block-end: 2rem;
+            @include mobile{
+                width: 90%;
+            }
             h3{
                 font-size: 1.6rem;
                 color: #fff;
@@ -603,7 +954,12 @@ header{
                 border: 0;
                 background-color: #fff;
                 width: 48%;
+                overflow: hidden !important;
 
+                @include mobile{
+                    //width: 100%;
+                    overflow: visible;
+                }
                 .checkbox{
                     display: block;
                     position: relative;
@@ -620,7 +976,8 @@ header{
                     font-weight: 600;
                     opacity: 1;
                     padding-left: 2rem;
-    
+
+                    overflow: hidden !important;
     
                     //Hide the browser's default checkbox 
                     input{
@@ -633,11 +990,13 @@ header{
                     //create a custom checkbox
                     .checkmark{
                         position: absolute;
-                        top: -3px;
+                        top: -2px;
                         left: 0;
                         height: 25px;
                         width: 25px;
                         background-color: #D9D9D9;
+
+                        overflow: visible;
     
                         &::after{
                             content: url('/assets/check-mark.svg');
@@ -667,6 +1026,9 @@ header{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                @include mobile{
+                    //display: none;
+                }
             }
         
             
@@ -682,14 +1044,7 @@ header{
                 resize: none;
             }
             
-            /*
-            p{
-                font-size: 16px;
-                line-height: 20px;
-                color: rgba(0, 0, 0, 0.5);
-                font-weight: 600;
-                opacity: 1;
-            }*/
+
             button{
                 background-color: var(--primary);
                 color: #fff;
@@ -708,3 +1063,25 @@ header{
         background-position: 0% 0%;
     }
 }   
+
+#footer{
+    background-image: url('/assets/footer.png');
+    background-size: cover;
+    color: #fff;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a{
+        margin-bottom: 3rem;
+    }
+    h3{
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 160%;
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+}
