@@ -626,14 +626,15 @@ header{
 
 .book-container{
     display: flex;
-    padding-block-end: 6rem;
-
+    @include mobile{
+        display: block;
+    }
     @include tablet{
         justify-content: flex-start;
     }
     .book{
         margin-block: 2rem;
-        padding-block: 4rem;
+        //padding-block: 4rem;
         width: 40%;
         display: flex;
         justify-content: center;
@@ -657,6 +658,9 @@ header{
             }
             
         }
+    }
+    .book:nth-child(2){
+        margin-block-end: 2rem;
     }
     .content{
         width: 60%;
@@ -707,13 +711,14 @@ header{
     padding-block-end: 0 !important;
 }
 .book-container:nth-child(2){
-    padding-block-start: 0rem;
+    margin-block-end: 2rem;
 }
 
 
 
 #publications{
     padding-block: 3.25rem;
+    margin-block-start: 5rem;
     padding-block-end: 5rem;
     margin-bottom: 25vh;
     font-size: 16px;
