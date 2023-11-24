@@ -87,6 +87,17 @@ p {
   }
 }
 
+.display {
+  width: 100%;
+  position: fixed;
+  background-color: var(--primary);
+  padding: 1rem;
+  z-index: 100;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -95,7 +106,7 @@ nav {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 10;
 }
 @media (max-width: 600px) {
   nav {
@@ -470,8 +481,7 @@ header .header-content button {
 }
 #team h4 {
   width: 80%;
-  -webkit-margin-start: 2rem;
-          margin-inline-start: 2rem;
+  margin-inline-start: 2rem;
   padding-block: 2rem;
   opacity: 0.5;
   font-size: 20px;
@@ -517,8 +527,7 @@ header .header-content button {
 }
 #team .members .member h2 {
   color: var(--primary);
-  -webkit-padding-before: 1rem;
-          padding-block-start: 1rem;
+  padding-block-start: 1rem;
   font-size: 1.25rem;
   font-weight: 500;
 }
@@ -544,14 +553,12 @@ header .header-content button {
 
 #prints {
   padding-block: 2rem;
-  -webkit-padding-before: 4rem;
-          padding-block-start: 4rem;
+  padding-block-start: 4rem;
   font-size: 16px;
 }
 #prints h4 {
   width: 80%;
-  -webkit-margin-start: 2rem;
-          margin-inline-start: 2rem;
+  margin-inline-start: 2rem;
   padding-block: 2rem;
   font-size: 20px;
   font-weight: 500;
@@ -559,8 +566,7 @@ header .header-content button {
 @media (max-width: 600px) {
   #prints h4 {
     width: 100%;
-    -webkit-margin-start: 0;
-            margin-inline-start: 0;
+    margin-inline-start: 0;
     text-align: center;
   }
 }
@@ -672,8 +678,7 @@ header .header-content button {
   }
 }
 .book-container .book:nth-child(2) {
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
+  margin-block-end: 2rem;
 }
 .book-container .content {
   width: 60%;
@@ -710,8 +715,7 @@ header .header-content button {
 .book-container .content button {
   color: var(--primary);
   border-color: var(--primary);
-  -webkit-margin-start: 2rem;
-          margin-inline-start: 2rem;
+  margin-inline-start: 2rem;
 }
 @media (max-width: 600px) {
   .book-container .content button {
@@ -727,21 +731,17 @@ header .header-content button {
 }
 
 .book-container:nth-child(1) {
-  -webkit-padding-after: 0 !important;
-          padding-block-end: 0 !important;
+  padding-block-end: 0 !important;
 }
 
 .book-container:nth-child(2) {
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
+  margin-block-end: 2rem;
 }
 
 #publications {
   padding-block: 3.25rem;
-  -webkit-margin-before: 5rem;
-          margin-block-start: 5rem;
-  -webkit-padding-after: 5rem;
-          padding-block-end: 5rem;
+  margin-block-start: 5rem;
+  padding-block-end: 5rem;
   margin-bottom: 25vh;
   font-size: 16px;
   background-color: var(--family-tree);
@@ -755,12 +755,9 @@ header .header-content button {
 }
 #publications h4 {
   width: 80%;
-  -webkit-margin-start: 2rem;
-          margin-inline-start: 2rem;
-  -webkit-padding-before: 2rem;
-          padding-block-start: 2rem;
-  -webkit-margin-before: 2rem;
-          margin-block-start: 2rem;
+  margin-inline-start: 2rem;
+  padding-block-start: 2rem;
+  margin-block-start: 2rem;
   font-size: 20px;
 }
 #publications .articles {
@@ -770,6 +767,7 @@ header .header-content button {
   margin-inline: auto;
   margin-block: 4rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 @media (max-width: 600px) {
   #publications .articles {
@@ -786,7 +784,7 @@ header .header-content button {
   padding: 1.8rem;
   background-color: #fff;
   border-radius: 2px;
-  width: 22%;
+  width: 33% !important;
   border: 3px solid rgb(255, 255, 106);
 }
 @media (max-width: 600px) {
@@ -847,17 +845,14 @@ header .header-content button {
 }
 @media (max-width: 600px) {
   #publications button {
-    -webkit-margin-before: 30px;
-            margin-block-start: 30px;
+    margin-block-start: 30px;
   }
 }
 
 #seminars {
   padding-block: 2rem;
-  -webkit-padding-before: 4rem;
-          padding-block-start: 4rem;
-  -webkit-padding-after: 3rem;
-          padding-block-end: 3rem;
+  padding-block-start: 4rem;
+  padding-block-end: 3rem;
   font-size: 16px;
   background-color: var(--family-tree);
   background-image: url("/assets/connected.jpg");
@@ -865,8 +860,7 @@ header .header-content button {
 }
 #seminars h4 {
   width: 80%;
-  -webkit-margin-start: 2rem;
-          margin-inline-start: 2rem;
+  margin-inline-start: 2rem;
   padding-block: 2rem;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
@@ -927,6 +921,30 @@ header .header-content button {
 #seminars .articles .article a:hover {
   cursor: initial;
 }
+#seminars .articles .article:nth-child(1) {
+  background-color: var(--family-tree) !important;
+}
+#seminars .articles .article:nth-child(1) a {
+  color: #fff !important;
+  text-decoration: underline;
+  opacity: 1;
+  line-height: 150%;
+  cursor: pointer;
+}
+#seminars .articles .active {
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+#seminars .articles .article:nth-child(2) {
+  background-color: var(--family-tree) !important;
+}
+#seminars .articles .article:nth-child(2) a {
+  color: #fff !important;
+  text-decoration: underline;
+  opacity: 1;
+  line-height: 150%;
+  cursor: pointer;
+}
 #seminars a {
   color: #fff;
   text-decoration: none;
@@ -953,13 +971,11 @@ header .header-content button {
 
 #workspace {
   padding-block: 10rem;
-  -webkit-padding-after: 5rem;
-          padding-block-end: 5rem;
+  padding-block-end: 5rem;
 }
 #workspace h4 {
   width: 80%;
-  -webkit-margin-start: 2rem;
-          margin-inline-start: 2rem;
+  margin-inline-start: 2rem;
   padding-block: 2rem;
   opacity: 0.5;
   font-size: 20px;
@@ -1016,8 +1032,7 @@ header .header-content button {
 }
 
 #appointments {
-  -webkit-padding-before: 4.5rem;
-          padding-block-start: 4.5rem;
+  padding-block-start: 4.5rem;
 }
 #appointments h1 {
   margin-left: 2.2rem;
@@ -1036,8 +1051,7 @@ header .header-content button {
   color: #156064;
   opacity: 1;
   padding-block: 1.5rem;
-  -webkit-padding-end: 4rem;
-          padding-inline-end: 4rem;
+  padding-inline-end: 4rem;
   margin-bottom: 2rem;
   width: 35%;
   color: var(--primary) !important;
@@ -1045,8 +1059,7 @@ header .header-content button {
 @media (max-width: 600px) {
   #appointments .text-info p {
     width: 50%;
-    -webkit-padding-end: 12px;
-            padding-inline-end: 12px;
+    padding-inline-end: 12px;
   }
 }
 #appointments .form-row {
@@ -1080,8 +1093,7 @@ header .header-content button {
   width: 80%;
   margin-inline: auto;
   padding-block: 1rem;
-  -webkit-padding-after: 2rem;
-          padding-block-end: 2rem;
+  padding-block-end: 2rem;
 }
 @media (max-width: 600px) {
   #appointments .form-area form {
@@ -1267,6 +1279,7 @@ header .header-content button {
   text-align: center;
   line-height: 160%;
   font-weight: 200;
+  margin-bottom: 3rem;
 }
 @media (max-width: 600px) {
   #footer h3 {
