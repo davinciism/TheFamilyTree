@@ -763,7 +763,6 @@ header{
         flex-wrap: wrap;
         @include mobile{
             flex-direction: column;
-            flex-wrap: wrap;
         }
         @include tablet{
             flex-wrap: wrap;
@@ -772,11 +771,10 @@ header{
             padding: 1.8rem;
             background-color: #fff;
             border-radius: 2px;
-            //width: 22%;
             width: 33% !important;
             border: 3px solid rgb(255, 255, 106);
             @include mobile{
-                width: 100%;
+                width: 100% !important;
                 margin-bottom: 16px;
             }
             @include tablet{
