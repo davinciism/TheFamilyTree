@@ -135,6 +135,10 @@ nav{
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        @include tablet{
+            width: 60%;
+            justify-content: end;
+        }
         li{
             margin-inline: 2.2rem;
             a{
@@ -153,13 +157,14 @@ nav{
                 margin-right: 1.6rem;
             }
         }
-        li:nth-child(4){
-            padding-inline: 0;
+        /*
+        li:nth-child(6){
+            margin-inline: 0;
             margin-left: 2.2rem;
             @include tablet{
                 margin-left: 1.6rem;
             }
-        }
+        }*/
     }
 }
 
