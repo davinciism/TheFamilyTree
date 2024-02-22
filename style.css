@@ -346,7 +346,7 @@ header .header-content h1 {
 }
 @media screen and (min-width: 600px) and (max-width: 1100px) {
   header .header-content h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 }
 header .header-content p {
@@ -363,7 +363,7 @@ header .header-content p {
 @media screen and (min-width: 600px) and (max-width: 1100px) {
   header .header-content p {
     width: 80%;
-    font-size: 1.6rem;
+    font-size: 1.25rem;
   }
 }
 header .header-content button {
@@ -374,87 +374,7 @@ header .header-content button {
     font-size: 1.6rem;
     padding-inline: 36px;
     padding-block: 12px;
-  }
-}
-
-#emotion-home {
-  background-color: var(--family-tree);
-  background-image: url("/assets/books.jpg");
-  background-size: cover;
-  background-position: 0% 15%;
-  height: 100vh;
-  height: 100dvh;
-  color: #fff;
-}
-#emotion-home .overlay {
-  height: 100vh;
-  width: 100%;
-  background-color: #000;
-  position: absolute;
-  opacity: 0.75;
-}
-#emotion-home .header-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  width: 60%;
-  margin-inline: auto;
-  gap: 1rem;
-  padding-top: 6rem;
-  z-index: 10;
-}
-@media (max-width: 600px) {
-  #emotion-home .header-content {
-    width: 90%;
-    padding-top: 2rem;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1100px) {
-  #emotion-home .header-content {
-    width: 80%;
-  }
-}
-#emotion-home .header-content h1 {
-  font-size: 3.4rem;
-}
-@media (max-width: 600px) {
-  #emotion-home .header-content h1 {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1100px) {
-  #emotion-home .header-content h1 {
-    font-size: 4.5rem;
-  }
-}
-#emotion-home .header-content p {
-  font-size: 16px;
-  padding-block: 1rem;
-  width: 40%;
-  line-height: 1.8rem;
-}
-@media (max-width: 600px) {
-  #emotion-home .header-content p {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1100px) {
-  #emotion-home .header-content p {
-    width: 80%;
-    font-size: 1.6rem;
-  }
-}
-#emotion-home .header-content button {
-  margin-block: 1rem;
-}
-@media screen and (min-width: 600px) and (max-width: 1100px) {
-  #emotion-home .header-content button {
-    font-size: 1.6rem;
-    padding-inline: 36px;
-    padding-block: 12px;
+    font-size: 1rem;
   }
 }
 

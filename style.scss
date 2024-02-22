@@ -353,7 +353,7 @@ header{
                 font-size: 2.5rem;
             }
             @include tablet{
-                font-size: 4.5rem;
+                font-size: 3rem;
             }
         }
         p{
@@ -366,7 +366,7 @@ header{
             }
             @include tablet{
                 width: 80%;
-                font-size: 1.6rem;
+                font-size: 1.25rem;
             }
         }
         button{
@@ -375,78 +375,12 @@ header{
                 font-size: 1.6rem;
                 padding-inline: 36px;
                 padding-block: 12px;
+                font-size: 1rem;
             }
         }
     }
 }
-#emotion-home{
-    background-color: var(--family-tree);
-    background-image: url('/assets/books.jpg');
-    background-size: cover;
-    background-position: 0% 15%;
-    height: 100vh;
-    height: 100dvh;
-    color: #fff;
 
-    .overlay{
-        height: 100vh;
-        width: 100%;
-        background-color: #000;
-        position: absolute;
-        opacity: 0.75;
-        //z-index: -1;
-    }
-    .header-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 100%;
-        width: 60%;
-        margin-inline: auto;
-        gap: 1rem;
-        padding-top: 6rem;
-        z-index: 10;
-        @include mobile{
-            width: 90%;
-            padding-top: 2rem;
-        }
-        @include tablet{
-            width: 80%;
-        }
-        h1{
-            font-size: 3.4rem;
-            @include mobile{
-                font-size: 2.5rem;
-            }
-            @include tablet{
-                font-size: 4.5rem;
-            }
-        }
-        p{
-            font-size: 16px;
-            padding-block: 1rem;
-            width: 40%;
-            line-height: 1.8rem;
-            @include mobile{
-                width: 90%;
-            }
-            @include tablet{
-                width: 80%;
-                font-size: 1.6rem;
-            }
-        }
-        button{
-            margin-block: 1rem;
-            @include tablet{
-                font-size: 1.6rem;
-                padding-inline: 36px;
-                padding-block: 12px;
-            }
-        }
-    }
-}
 
 .info{
     width: 60%;
