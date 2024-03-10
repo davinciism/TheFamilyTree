@@ -11,6 +11,7 @@
 :root {
   --primary: #156064;
   --family-tree: #81864e;
+  --emotion: #B33732;
 }
 
 .container {
@@ -303,6 +304,231 @@ nav ul li:nth-child(1) {
 #sidebar a {
   text-decoration: none !important;
 }
+@media (max-width: 600px) {
+  #sidebar .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #sidebar a {
+    width: 100%;
+  }
+}
+#sidebar button {
+  margin-block: 1rem;
+  margin-inline: 0.5rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  #sidebar button {
+    font-size: 1.6rem;
+    padding-inline: 36px;
+    padding-block: 12px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  #sidebar button {
+    margin-block: 0.5rem;
+    width: 60%;
+  }
+}
+
+header {
+  background-color: var(--family-tree);
+  background-image: url("/assets/header-bg.jpg");
+  background-size: cover;
+  background-position: 0% 15%;
+  height: 100vh;
+  height: 100dvh;
+  color: #fff;
+}
+header .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 60%;
+  margin-inline: auto;
+  gap: 1rem;
+  padding-top: 6rem;
+}
+@media (max-width: 600px) {
+  header .header-content {
+    width: 90%;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  header .header-content {
+    width: 80%;
+  }
+}
+header .header-content h1 {
+  font-size: 3.4rem;
+}
+@media (max-width: 600px) {
+  header .header-content h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  header .header-content h1 {
+    font-size: 3rem;
+  }
+}
+header .header-content p {
+  font-size: 16px;
+  padding-block: 1rem;
+  width: 40%;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) {
+  header .header-content p {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  header .header-content p {
+    width: 80%;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 600px) {
+  header .header-content .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  header .header-content a {
+    width: 100%;
+  }
+}
+header .header-content button {
+  margin-block: 1rem;
+  margin-inline: 0.5rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  header .header-content button {
+    font-size: 1.6rem;
+    padding-inline: 36px;
+    padding-block: 12px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  header .header-content button {
+    margin-block: 0.5rem;
+    width: 80%;
+  }
+}
+
+.info {
+  width: 60%;
+  margin-inline: auto;
+  display: flex;
+  margin-block: 8rem;
+  padding-block: 2rem;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 600px) {
+  .info {
+    width: 90%;
+    flex-direction: column;
+    margin-block: 24px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  .info {
+    width: 90%;
+  }
+}
+.info img {
+  width: 50%;
+}
+@media (max-width: 600px) {
+  .info img {
+    width: 90%;
+  }
+}
+.info p {
+  width: 50%;
+  font-size: 1.2rem;
+}
+@media (max-width: 600px) {
+  .info p {
+    width: 90%;
+  }
+}
+
+.connected {
+  background-color: var(--family-tree);
+  background-image: url("/assets/connected.jpg");
+  background-size: cover;
+  padding: 3rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 2rem;
+  margin-top: 8rem;
+}
+@media (max-width: 600px) {
+  .connected {
+    padding: 16px;
+    padding-block: 52px;
+  }
+}
+.connected h1 {
+  font-size: 3.4rem;
+  width: 70%;
+  margin-inline: auto;
+}
+@media (max-width: 600px) {
+  .connected h1 {
+    width: 80%;
+    font-size: 42px;
+  }
+}
+.connected .line {
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+  margin-inline: auto;
+  margin-block: 3rem;
+}
+@media (max-width: 600px) {
+  .connected .line {
+    margin-block: 36px;
+  }
+}
+.connected p {
+  opacity: 1;
+  width: 70%;
+  margin-inline: auto;
+}
+@media (max-width: 600px) {
+  .connected p {
+    width: 90%;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  padding-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .reverse {
+    width: 90%;
+    flex-direction: column;
+    margin-block: 24px;
+  }
+}
 
 .navbar {
   display: none;
@@ -361,7 +587,7 @@ nav ul li:nth-child(1) {
   top: 10%;
 }
 .navbar-mobile-scrolled button {
-  background-color: #B33732;
+  background-color: var(--emotion);
 }
 
 #emotion-home {

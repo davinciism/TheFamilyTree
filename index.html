@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Family Tree | Child and Adolescent Mental Health Team</title>
+    <title>The Family Tree | Mental Health Team</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -91,9 +91,14 @@
             -->
         </ul>
 
-            <a href="#appointments" class="mobile-link">
-                <button class="btn-primary">Book Appointment</button>
-            </a>
+            <div class="buttons">
+                <a href="./adults.html">
+                    <button class="btn-outline">Adults</button>
+                </a>
+                <a href="#appointments">
+                    <button class="btn-outline">Child and Adolescent</button>
+                </a>
+            </div>
 
     </div>
 
@@ -102,20 +107,18 @@
         <div class="header-content">
             <h1>Let’s talk about things that matter to you</h1>
             <p>Psychotherapy for emotional distress</p>
-            <a href="#appointments">
-                <button class="btn-outline">Book Appointment</button>
-            </a>
+            <h3>Book Appointment</h3>
+            <div class="buttons">
+                <a href="adults.html">
+                    <button class="btn-outline">Adults</button>
+                </a>
+                <a href="#appointments">
+                    <button class="btn-outline">Child and Adolescent</button>
+                </a>
+            </div>
         </div>
         
     </header>
-
-    
-    <section class="info">
-        <img src="/assets/image-3-452x570.jpg" alt="">
-        <p>Family Tree is a Child and Adolescent Mental Health Team set up in 2018 to address the gap in such services in New Delhi. It is composed of Child and Adolescent Psychotherapists who work to support children, adolescents and families with emotional and relationship difficulties.
-            <br><br>
-        It is a self-funded team based out of Safdurjung Enclave and we have seen over 500 children and adolescents in the last 5 years. All of our referrals are by word-of-mouth.</p>
-    </section>
 
     <section class="connected container">
         <h1>We are all different but we are connected</h1>
@@ -124,6 +127,13 @@
         Conversations at Family Tree tend to be about stuff that is central to us all: Feelings – whether consciously known or leaking out in some way, and Relationships – past and present.
         <br><br>
         The conversations are also about ordinary, everyday events, behaviour and difficulties, which are part of everyone’s lives but can also cause distress – big or small. If it matters to you, it is worth talking about.</p>
+    </section>
+
+    <section class="info">
+        <img src="/assets/image-3-452x570.jpg" alt="">
+        <p>Family Tree is a Mental Health Team set up in 2018 to address the gap in such services in New Delhi. It is composed of Child and Adolescent Psychotherapists who work to support children, adolescents and families with emotional and relationship difficulties.
+            <br><br>
+        It is a self-funded team based out of Safdurjung Enclave and we have seen over 500 children and adolescents in the last 5 years. All of our referrals are by word-of-mouth.</p>
     </section>
 
     <section class="info reverse">
@@ -353,6 +363,7 @@
             <div class="form-area">
                 <form name="contact" method="post" data-netlify="true">
                     <h3>Enquiry for an appointment</h3>
+                    <input type="hidden" name="subject" value="New lead from %{formName}-child (%{submissionId})" />
                     <input type="text" name="name" id="name" placeholder="Your Full Name" required class="full-length">
                     <input type="email" name="email" id="email" placeholder="Your Email Address" required class="full-length">
 
@@ -397,7 +408,7 @@
         <a href="#home">
             <img src="/assets/logo-white.png" alt="">
         </a>
-        <h3>Child and Adolescent Mental Health Team <br>
+        <h3>Mental Health Team <br>
             Tuesday–Saturday by appointment <br>
             B5/28, GF, Safdurjung enclave, New Delhi | +91-11-26107477</h3>
 
