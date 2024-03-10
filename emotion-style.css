@@ -221,7 +221,7 @@ nav ul li:nth-child(1) {
   box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
 }
 .navbar-mobile-scrolled a {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 .navbar-mobile-scrolled button {
   background-color: var(--primary);
@@ -310,17 +310,25 @@ nav ul li:nth-child(1) {
   position: fixed;
   z-index: 100;
   width: 100%;
-  padding: 24px;
-  justify-content: space-between;
-  align-items: center;
+  padding-inline: 24px;
+  padding-block: 12px;
+  padding-block-end: 24px;
+  height: 15vh;
 }
 .navbar img {
   height: 42px;
 }
-.navbar div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar ul {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar ul li:nth-child(1) {
+  margin-bottom: 1.5rem;
 }
 .navbar .menu-icon {
   height: 28px;
@@ -346,20 +354,14 @@ nav ul li:nth-child(1) {
 .navbar-mobile-scrolled {
   background: #fff !important;
   color: var(--primary);
-  box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
 }
-.navbar-mobile-scrolled a {
-  color: var(--primary);
+.navbar-mobile-scrolled ul {
+  position: relative;
+  right: 0;
+  top: 10%;
 }
 .navbar-mobile-scrolled button {
   background-color: #B33732;
-  color: #fff;
-}
-.navbar-mobile-scrolled .line {
-  background-color: var(--primary) !important;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
 }
 
 #emotion-home {
