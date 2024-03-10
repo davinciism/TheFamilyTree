@@ -1,6 +1,12 @@
 @import './basic';
 
-
+nav{
+    a{
+        img{
+            width: 180px !important;
+        }
+    }
+}
 .navbar{
     display: none;
     background-color: transparent;
@@ -227,7 +233,7 @@
     }
 }
 
-.info{
+.emotion-info{
     padding-block: 6rem;
     img{
         height: 12rem;

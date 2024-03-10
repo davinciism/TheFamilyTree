@@ -530,6 +530,10 @@ header .header-content button {
   }
 }
 
+nav a img {
+  width: 180px !important;
+}
+
 .navbar {
   display: none;
   background-color: transparent;
@@ -777,15 +781,15 @@ header .header-content button {
   margin-top: 12px;
 }
 
-.info {
+.emotion-info {
   padding-block: 6rem;
 }
-.info img {
+.emotion-info img {
   height: 12rem;
   margin: 0 auto;
   display: block;
 }
-.info p.heading {
+.emotion-info p.heading {
   text-align: center;
   opacity: 1;
   width: 60%;
@@ -793,44 +797,44 @@ header .header-content button {
   margin-top: 0;
 }
 @media (max-width: 600px) {
-  .info p.heading {
+  .emotion-info p.heading {
     font-size: 1.25rem;
     width: 80%;
   }
 }
-.info .row {
+.emotion-info .row {
   display: flex;
   justify-content: center;
 }
 @media (max-width: 600px) {
-  .info .row {
+  .emotion-info .row {
     flex-direction: column;
   }
 }
-.info .row p {
+.emotion-info .row p {
   flex-basis: 1fr;
   width: 25%;
 }
-.info .row p:nth-child(1) {
+.emotion-info .row p:nth-child(1) {
   text-align: right;
 }
 @media (max-width: 600px) {
-  .info .row p:nth-child(1) {
+  .emotion-info .row p:nth-child(1) {
     text-align: left;
   }
 }
 @media (max-width: 600px) {
-  .info .row p {
+  .emotion-info .row p {
     width: 100%;
   }
 }
-.info .row img {
+.emotion-info .row img {
   flex-basis: 1fr;
   margin-inline: 2rem;
   height: 60vh;
 }
 @media (max-width: 600px) {
-  .info .row img {
+  .emotion-info .row img {
     width: 100%;
     height: auto;
     margin-inline: auto;
