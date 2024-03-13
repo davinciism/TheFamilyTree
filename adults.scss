@@ -11,7 +11,41 @@
 
 header{
     background-image: url('/assets/adults-bg.jpg');
+    p{
+        opacity: 1 !important;
+        width: 50% !important;
+        @include mobile{
+            width: 65% !important;
+        }
+    }
 }
+
+.adult-info{
+    // width: 100%;
+    margin-inline: auto;
+    margin-block: 8rem;
+    padding-block: 2rem;
+
+    @include mobile{
+        margin-block: 24px;
+    }
+    h3{
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+        color: var(--family-tree);
+    }
+    p{
+        width: 70%;
+        font-size: 1.2rem;
+        @include mobile{
+            width: 90%;
+        }
+        @include tablet{
+            width: 75%;
+        }
+    }
+}
+
 
 #appointments{
     padding-block-start: 4.5rem;
