@@ -550,15 +550,12 @@ nav a img {
 }
 .navbar ul {
   position: absolute;
-  top: 30%;
+  top: 37%;
   right: 5%;
 }
 .navbar ul li a {
   color: #fff;
   text-decoration: none;
-}
-.navbar ul li:nth-child(1) {
-  margin-bottom: 1.5rem;
 }
 .navbar .menu-icon {
   height: 28px;
