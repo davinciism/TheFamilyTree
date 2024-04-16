@@ -18,6 +18,16 @@ header{
             width: 65% !important;
         }
     }
+    .buttons{
+        //margin-bottom: -8rem;
+    }
+    audio{
+        margin-top: 4rem;
+        @include mobile{
+            width: 100%;
+            //margin-top: 12rem;
+        }
+    }
 }
 
 .adult-info{
@@ -58,6 +68,9 @@ header{
         margin-bottom: 2.2rem;
         font-size: 3.2rem;
         color: var(--primary);
+        @include mobile{
+            font-size: 3rem;
+        }
     }
     .text-info{
         display: flex;

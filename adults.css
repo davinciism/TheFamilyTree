@@ -545,6 +545,14 @@ header p {
     width: 65% !important;
   }
 }
+header audio {
+  margin-top: 4rem;
+}
+@media (max-width: 600px) {
+  header audio {
+    width: 100%;
+  }
+}
 
 .adult-info {
   margin-inline: auto;
@@ -588,6 +596,11 @@ header p {
   margin-bottom: 2.2rem;
   font-size: 3.2rem;
   color: var(--primary);
+}
+@media (max-width: 600px) {
+  #appointments h1 {
+    font-size: 3rem;
+  }
 }
 #appointments .text-info {
   display: flex;
