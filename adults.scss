@@ -43,6 +43,10 @@ header{
         @include tablet{
             width: 75%;
         }
+        a{
+            color: var(--primary);
+            font-weight: 600;
+        }
     }
 }
 

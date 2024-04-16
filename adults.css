@@ -575,6 +575,10 @@ header p {
     width: 75%;
   }
 }
+.adult-info p a {
+  color: var(--primary);
+  font-weight: 600;
+}
 
 #appointments {
   padding-block-start: 4.5rem;

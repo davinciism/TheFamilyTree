@@ -1094,6 +1094,11 @@ header .header-content button {
   font-size: 3.2rem;
   color: var(--primary);
 }
+@media (max-width: 600px) {
+  #appointments h1 {
+    font-size: 3rem;
+  }
+}
 #appointments .text-info {
   display: flex;
   flex-direction: row;
