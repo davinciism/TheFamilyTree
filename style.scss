@@ -434,6 +434,20 @@
                 }
             }
         }
+        .active{
+            background-color: var(--family-tree) !important;
+            a{
+                color: #fff !important;
+                text-decoration: underline;
+                opacity: 1;
+                line-height: 150%;
+                cursor: pointer;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        /*
         .article:nth-child(1){
             background-color: var(--family-tree) !important;
             a{
@@ -448,6 +462,7 @@
             opacity: 0.5;
             text-transform: uppercase;
         }
+        
         .article:nth-child(2){
             background-color: var(--family-tree) !important;
             a{
@@ -458,6 +473,7 @@
                 cursor: pointer;
             }
         }
+        */
         
     }
     a{

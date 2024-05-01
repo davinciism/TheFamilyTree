@@ -928,6 +928,33 @@ header .header-content button {
   margin-inline: auto;
   margin-block: 4rem;
   justify-content: space-between;
+  /*
+  .article:nth-child(1){
+      background-color: var(--family-tree) !important;
+      a{
+          color: #fff !important;
+          text-decoration: underline;
+          opacity: 1;
+          line-height: 150%;
+          cursor: pointer;
+      }
+  }
+  .active{
+      opacity: 0.5;
+      text-transform: uppercase;
+  }
+
+  .article:nth-child(2){
+      background-color: var(--family-tree) !important;
+      a{
+          color: #fff !important;
+          text-decoration: underline;
+          opacity: 1;
+          line-height: 150%;
+          cursor: pointer;
+      }
+  }
+  */
 }
 @media (max-width: 600px) {
   #seminars .articles {
@@ -975,28 +1002,17 @@ header .header-content button {
 #seminars .articles .article a:hover {
   cursor: initial;
 }
-#seminars .articles .article:nth-child(1) {
+#seminars .articles .active {
   background-color: var(--family-tree) !important;
 }
-#seminars .articles .article:nth-child(1) a {
+#seminars .articles .active a {
   color: #fff !important;
   text-decoration: underline;
   opacity: 1;
   line-height: 150%;
   cursor: pointer;
 }
-#seminars .articles .active {
-  opacity: 0.5;
-  text-transform: uppercase;
-}
-#seminars .articles .article:nth-child(2) {
-  background-color: var(--family-tree) !important;
-}
-#seminars .articles .article:nth-child(2) a {
-  color: #fff !important;
-  text-decoration: underline;
-  opacity: 1;
-  line-height: 150%;
+#seminars .articles .active a:hover {
   cursor: pointer;
 }
 #seminars a {
